@@ -1,0 +1,9 @@
+name: Pipeline Info
+on: issues
+jobs:
+  pipeline-info:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get pipeline info
+        run: |
+          echo "Pipeline ID: ${{ toJson(Github) }}"
